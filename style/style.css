@@ -1,0 +1,112 @@
+body {
+  font-size: 18px;
+  margin: 0px;
+  font-family: helvetica neue;
+  background-color:#FFFFFF;
+}
+/*
+  Typography
+*/
+h1 { font-size: 2em; line-height:1.5em;font-family: verdana; }
+h2 { font-size: 1.5em;font-family:verdana; }
+h3 { font-size: 1.25em; text-align: center;font-family:verdana;}
+h4 {font-size:9px; text-align: left; font-family:verdana;}
+p  { font-size: 1em }
+p:first-child::first-letter {
+  font-size: 2em;
+  text-decoration: underline;
+}
+/*links
+*/
+ a { text-decoration: none; }
+a:hover {
+  text-decoration:underline;
+}
+/*
+  The Grid
+*/
+* { /* box-sizing */
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.grid {
+  margin: 0 0 10px 0;
+  padding: 10px;
+}
+.grid-3-4 { width: 75% }
+.grid-1-4 { width: 25% }
+[class*='grid-'] {
+  float: left;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.grid [class*='grid-']:last-of-type {
+  padding-right: 10px; /*offsets above padding*/
+}
+/*
+  Grid Modules
+*/
+.module {
+  padding: 10px;
+  height:auto;
+}
+.module img {
+  width: 100%;
+  margin: auto;
+}
+.module p {
+  line-height: 1.5em;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* OR */
+/*
+  Background Colors
+*/
+.bg-color{
+  background-color:#bbc4ef;}
+/*ul style
+*/
+ul {
+    list-style-type: none;
+}
+/*
+  Header
+*/
+header {
+  width: 100%;
+  color: #fff;
+  background-color:#fccdd3;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* unvisited link */
+a:link {
+    color:#FFFFFF;
+}
+/* visited link */
+a:visited {
+    color:#62bcfa;
+}
+/* mouse over link */
+a:hover {
+    color:#fccdd3;
+}
+/* selected link */
+a:active {
+    color:#69b0ff
+}
+/* 
+  Adaptive media query 
+*/
+@media (min-width: 0px) and (max-width: 800px) {
+  .right-text-container {width: 100%;}
+  .left-img-container {width: 100%;}
+}
+</style>
