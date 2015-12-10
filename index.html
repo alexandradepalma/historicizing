@@ -1,145 +1,9 @@
-<title>LZW Compression Methods</title>
-<section id="cats">
-<style>
-body {
-  font-size: 18px;
-  margin: 0px;
-  font-family: helvetica neue;
-  background-color:#FFFFFF;
-}
-
-
-/*
-  Typography
-*/
-
-h1 { font-size: 2em; line-height:1.5em;font-family: verdana; }
-h2 { font-size: 1.5em;font-family:verdana; }
-h3 { font-size: 1.25em; text-align: center;font-family:verdana;}
-h4 {font-size:12px; text-align: left; font-family:verdana;}
-
-p  { font-size: 1em }
-p:first-child::first-letter {
-  font-size: 2em;
-  text-decoration: underline;
-}
-
-
-/*links
-*/
- a { text-decoration: none; }
-a:hover {
-  text-decoration:underline;
-}
-
-
-/*
-  The Grid
-*/
-* { /* box-sizing */
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-.grid {
-  margin: 0 0 10px 0;
-  padding: 10px;
-}
-
-.grid-3-4 { width: 75% }
-.grid-1-4 { width: 25% }
-
-[class*='grid-'] {
-  float: left;
-  padding-right: 10px;
-  margin-top: 10px;
-}
-.grid [class*='grid-']:last-of-type {
-  padding-right: 10px; /*offsets above padding*/
-}
-
-/*
-  Grid Modules
-*/
-.module {
-  padding: 10px;
-  height:auto;
-}
-.module img {
-  width: 100%;
-  margin: auto;
-}
-.module p {
-  line-height: 1.5em;
-}
-
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* OR */
-
-
-/*
-  Background Colors
-*/
-.bg-color{
-  background-color:#bbc4ef;}
-
-/*ul style
-*/
-
-ul {
-    list-style-type: none;
-}
-
-
-
-/*
-  Header
-*/
-
-header {
-  width: 100%;
-  color: #fff;
-  background-color:#fccdd3;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  text-align: center;
-}
-/* unvisited link */
-a:link {
-    color:#FFFFFF;
-}
-
-/* visited link */
-a:visited {
-    color:#62bcfa;
-}
-
-/* mouse over link */
-a:hover {
-    color:#fccdd3;
-}
-
-/* selected link */
-a:active {
-    color:#69b0ff
-}
-
-/* 
-  Adaptive media query 
-*/
-@media (min-width: 0px) and (max-width: 800px) {
-  .right-text-container {width: 100%;}
-  .left-img-container {width: 100%;}
-}
-</style>
-  <header>
+ <!DOCTYPE html>
+ <html lang= "en">
+ <head>
+<meta charset="utf-8">
+ </head>
+ <header>
     <h1>Historicizing LZW Compression Algorithms</h1>
   </header>
   
@@ -247,7 +111,7 @@ a:active {
     <div class="grid-3-4 right-text-container">
       <div class="module">
         <p>
-         Starting in 1993, Unisys began attempting to collect licensing fees for the use of the LZW compression algorithm. Only ten years into the twenty-year patent granted to Terry Welch and Unisys (which acquired Sperry Corporation) by the United States government, Unisys was perfectly within its legal right to being collecting licensing fees. However, the Graphics Interchange Format (GIF), the most popular image format of the moment used LZW compression to reduce the file size (Cloanto).
+ Starting in 1993, Unisys began attempting to collect licensing fees for the use of the LZW compression algorithm. Only ten years into the twenty-year patent granted to Terry Welch and Unisys (which acquired Sperry Corporation) by the United States government, Unisys was perfectly within its legal right to being collecting licensing fees. However, the Graphics Interchange Format (GIF), the most popular image format of the moment used LZW compression to reduce the file size (Cloanto).
         </p>
         <p>
         It was not the fact that Unisys began collecting royalties on the use of the LZW algorithm that angered the masses, but rather the fact that they began collecting royalties ten years after its invention when specification and standards that employed LZW had already been set in place. To be fair to Unisys, the explosion of  LZW’s use to compress different technologies was unanticipated and to maintain tabs on every technology using LZW would have taking mammoth amounts of time and manpower. It is possible that in 1993, Unisys was just finding time to come up for air and begin monetizing its product. 
@@ -260,8 +124,15 @@ a:active {
         </p>
         <p>
 
-PNG files were comparable to GIF and TIFF files in that they employed a lossless data compression method that allowed data to be decompressed and restructured bit by bit into an exact replica of the original image (libpng). While I argue that PNG files did not replace GIF files because they are not animated and therefore serve a different purpose in the current moment, they have grown in popularity over the past twenty years and were used on 62.4% of all websites as of 2013, opposed to GIF’s 62.3% W3 Techs). This .1% may seem very trivial, but in 2012, GIF was ahead of PNG by over 15% (W3 Techs). *<i>see graphic at left</i>
-   <p>
+PNG files were comparable to GIF and TIFF files in that they employed a lossless data compression method that allowed data to be decompressed and restructured bit by bit into an exact replica of the original image (libpng).Because LZW uses a table structure to compress/ decompress image files, only horizontal redundancies could be removed. PNG files are compressed using a variation on LZW—LZ77. LZ77 alows for the files to be compressed both vertically <i> and</i> horizontally, so PNG files are much smaller than GIF files  (Dev The Web). 
+</p>
+
+<p>
+
+ While I argue that PNG files did not replace GIF files because they are not animated and therefore serve a different purpose in the current moment, they have grown in popularity over the past twenty years and were used on 62.4% of all websites as of 2013, opposed to GIF’s 62.3% W3 Techs). This .1% may seem very trivial, but in 2012, GIF was ahead of PNG by over 15% (W3 Techs). *<i>see graphic at left</i>
+</p>
+
+
       </div>
     </div>
   </article>
